@@ -1,123 +1,316 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>TechTack Software</title>
 
     <style>
-        body {
-            font-family: Arial;
+        * {
             margin: 0;
-            background-color: #f4f4f4;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+            color: #333;
         }
 
         /* Navbar */
+
         .navbar {
-            background-color: #333;
-            padding: 15px;
-            text-align: center;
+            background: #111827;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             position: sticky;
             top: 0;
         }
 
-        .navbar a {
+        .logo {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .menu a {
             color: white;
             text-decoration: none;
-            margin: 15px;
-            font-size: 18px;
+            margin-left: 20px;
+            font-size: 17px;
         }
 
-        .navbar a:hover {
-            color: yellow;
+        .menu a:hover {
+            color: #38bdf8;
         }
 
-        h1 {
+        /* Hero Section */
+
+        .hero {
             text-align: center;
-            margin-top: 20px;
+            padding: 90px 20px;
+            background: linear-gradient(to right, #2563eb, #0ea5e9);
+            color: white;
         }
 
-        .box {
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
             background: white;
-            width: 70%;
-            margin: 30px auto;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .box a {
-            display: block;
-            margin: 10px;
+            color: #2563eb;
+            padding: 12px 25px;
+            border-radius: 8px;
             text-decoration: none;
-            color: blue;
+            font-weight: bold;
         }
 
-        .box a:hover {
-            color: red;
+        .hero a:hover {
+            background: #111827;
+            color: white;
+        }
+
+        /* Section */
+
+        .section-title {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 35px;
+        }
+
+        /* Cards */
+
+        .container {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 40px 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            color: #2563eb;
+        }
+
+        .card a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #111827;
+        }
+
+        .card a:hover {
+            color: #2563eb;
+        }
+
+        /* About */
+
+        .about {
+            background: white;
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .about h2 {
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+
+        .about p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Mobile */
+
+        @media(max-width:768px) {
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .menu {
+                margin-top: 10px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Menu -->
+    <!-- Navbar -->
+
     <div class="navbar">
-        <a href="#python">Python</a>
-        <a href="#web">Web</a>
-        <a href="#ml">Machine Learning</a>
-        <a href="#django">Django</a>
-        <a href="#uiux">UI UX</a>
+
+        <div class="logo">
+            TechTack Software
+        </div>
+
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+        </div>
+
     </div>
 
-    <h1>TechTack Software - Student Projects</h1>
+    <!-- Hero -->
 
-    <!-- Python -->
-    <div class="box" id="python">
-        <h2>Python Projects</h2>
+    <section class="hero">
 
-        <a href="https://github.com/project1" target="_blank">
-            Student 1 - Calculator
+        <h1>Student Project Showcase</h1>
+
+        <p>
+            Explore real-time projects developed by TechTack Software students.
+        </p>
+
+        <a href="#projects">
+            View Projects
         </a>
 
-        <a href="https://github.com/project2" target="_blank">
-            Student 2 - Banking System
-        </a>
+    </section>
+
+    <!-- Projects -->
+
+    <h1 class="section-title" id="projects">
+        Our Student Projects
+    </h1>
+
+    <div class="container">
+
+        <!-- Python -->
+
+        <div class="card">
+
+            <h2>Python Projects</h2>
+
+            <a href="https://github.com/project1" target="_blank">
+                Student 1 - Calculator Project
+            </a>
+
+            <a href="https://github.com/project2" target="_blank">
+                Student 2 - Banking System
+            </a>
+
+            <a href="https://github.com/project3" target="_blank">
+                Student 3 - File Handling
+            </a>
+
+        </div>
+
+        <!-- Web -->
+
+        <div class="card">
+
+            <h2>Web Development</h2>
+
+            <a href="https://github.com/project4" target="_blank">
+                Student 4 - Tourism Website
+            </a>
+
+            <a href="https://github.com/project5" target="_blank">
+                Student 5 - Portfolio Website
+            </a>
+
+        </div>
+
+        <!-- ML -->
+
+        <div class="card">
+
+            <h2>Machine Learning</h2>
+
+            <a href="https://github.com/project6" target="_blank">
+                Student 6 - Prediction System
+            </a>
+
+            <a href="https://github.com/project7" target="_blank">
+                Student 7 - Data Analysis
+            </a>
+
+        </div>
+
+        <!-- Django -->
+
+        <div class="card">
+
+            <h2>Django Projects</h2>
+
+            <a href="https://github.com/project8" target="_blank">
+                Student 8 - Booking System
+            </a>
+
+            <a href="https://github.com/project9" target="_blank">
+                Student 9 - Blog Website
+            </a>
+
+        </div>
+
     </div>
 
-    <!-- Web -->
-    <div class="box" id="web">
-        <h2>Web Development Projects</h2>
+    <!-- About -->
 
-        <a href="https://github.com/project3" target="_blank">
-            Student 3 - Tourism Website
-        </a>
-    </div>
+    <section class="about" id="about">
 
-    <!-- ML -->
-    <div class="box" id="ml">
-        <h2>Machine Learning Projects</h2>
+        <h2>About TechTack Software</h2>
 
-        <a href="https://github.com/project4" target="_blank">
-            Student 4 - Prediction System
-        </a>
-    </div>
+        <p>
+            TechTack Software is focused on providing quality training and
+            internship programs in Python, Web Development, Machine Learning,
+            Django, UI UX, and Digital Technologies.
+        </p>
 
-    <!-- Django -->
-    <div class="box" id="django">
-        <h2>Django Projects</h2>
+    </section>
 
-        <a href="https://github.com/project5" target="_blank">
-            Student 5 - Booking System
-        </a>
-    </div>
+    <!-- Footer -->
 
-    <!-- UI UX -->
-    <div class="box" id="uiux">
-        <h2>UI UX Projects</h2>
-
-        <a href="https://github.com/project6" target="_blank">
-            Student 6 - Mobile Design
-        </a>
-    </div>
+    <footer>
+        © 2026 TechTack Software | All Rights Reserved
+    </footer>
 
 </body>
 
