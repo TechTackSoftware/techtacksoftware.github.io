@@ -1,33 +1,124 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>TechTack Software</title>
+
     <style>
         body {
             font-family: Arial;
-            text-align: center;
+            margin: 0;
             background-color: #f4f4f4;
         }
-        h1 {
-            color: #333;
+
+        /* Navbar */
+        .navbar {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
         }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            color: yellow;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
         .box {
             background: white;
+            width: 70%;
+            margin: 30px auto;
             padding: 20px;
-            margin: 20px auto;
-            width: 60%;
             border-radius: 10px;
+        }
+
+        .box a {
+            display: block;
+            margin: 10px;
+            text-decoration: none;
+            color: blue;
+        }
+
+        .box a:hover {
+            color: red;
         }
     </style>
 </head>
+
 <body>
 
-<h1>Welcome to Our Company</h1>
+    <!-- Menu -->
+    <div class="navbar">
+        <a href="#python">Python</a>
+        <a href="#web">Web</a>
+        <a href="#ml">Machine Learning</a>
+        <a href="#django">Django</a>
+        <a href="#uiux">UI UX</a>
+    </div>
 
-<div class="box">
-    <h2>Student Projects</h2>
-    <p>Projects will be updated soon...</p>
-</div>
+    <h1>TechTack Software - Student Projects</h1>
+
+    <!-- Python -->
+    <div class="box" id="python">
+        <h2>Python Projects</h2>
+
+        <a href="https://github.com/project1" target="_blank">
+            Student 1 - Calculator
+        </a>
+
+        <a href="https://github.com/project2" target="_blank">
+            Student 2 - Banking System
+        </a>
+    </div>
+
+    <!-- Web -->
+    <div class="box" id="web">
+        <h2>Web Development Projects</h2>
+
+        <a href="https://github.com/project3" target="_blank">
+            Student 3 - Tourism Website
+        </a>
+    </div>
+
+    <!-- ML -->
+    <div class="box" id="ml">
+        <h2>Machine Learning Projects</h2>
+
+        <a href="https://github.com/project4" target="_blank">
+            Student 4 - Prediction System
+        </a>
+    </div>
+
+    <!-- Django -->
+    <div class="box" id="django">
+        <h2>Django Projects</h2>
+
+        <a href="https://github.com/project5" target="_blank">
+            Student 5 - Booking System
+        </a>
+    </div>
+
+    <!-- UI UX -->
+    <div class="box" id="uiux">
+        <h2>UI UX Projects</h2>
+
+        <a href="https://github.com/project6" target="_blank">
+            Student 6 - Mobile Design
+        </a>
+    </div>
 
 </body>
+
 </html>
